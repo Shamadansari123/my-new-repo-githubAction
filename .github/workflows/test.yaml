@@ -29,5 +29,6 @@ jobs:
           IMAGE_TAG: latest
         run: |
           docker pull shamadafshu/my-first-docker-image:v1
-          docker pull shamadafshu/my-first-docker-image:v1 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker tag shamadafshu/my-first-docker-image:v1 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
